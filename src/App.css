@@ -1,0 +1,158 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: #0075BE;
+    --red: #FB1B1B;
+    --yellow: #FFCC00;
+    --white-shadow: #DFDFDF;
+}
+
+.App{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size: 35px;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 40vh;
+    background-color: var(--red);
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+    width: 20%;
+
+}
+
+.input{
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    width: 80%;
+    border-radius: 25px;
+    border: 1px solid black;
+    margin-bottom: 25px;
+    background-color: var(--white-shadow);
+}
+
+.input:placeholder-shown{
+    font-style: italic;
+}
+
+.button{
+    border-radius: 2px;
+    padding: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 2px 5px 8px #343434;
+    background-color: var(--blue);
+    color: white;
+    margin-bottom: 15px;
+}
+
+.header h1{
+    color: var(--yellow);
+    -webkit-text-stroke: 2px var(--blue);
+	-webkit-text-fill-color: var(--yellow);
+}
+
+.black {
+    height: 2vh;
+    width: 100%;
+    background: black;
+    z-index: -1;
+}
+
+.display{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 58vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+
+    padding-bottom: 90px;
+}
+
+.name::first-letter{
+    text-transform: capitalize;
+}
+
+.name{
+    margin-bottom: 20px;
+}
+
+.photo{
+    transform: scale(1.5);
+    margin-bottom: 10px;
+}
+
+.display h2{
+    margin-bottom: 8px;
+}
+
+.display h1{
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 960px) {
+    .App{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        height: 100vh;
+    }
+
+    .header{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 40%;
+    }
+
+    .form{
+        width: 80%;
+        margin-bottom: 50px;
+    }
+
+    .black{
+        z-index: -1;
+        width: 100%;
+        height: 2%;
+    }
+
+    .display{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .all{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+
+}
