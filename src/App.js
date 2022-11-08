@@ -45,7 +45,7 @@ function App() {
         <form onSubmit={handleSubmit} className="form">
           <input
             type="text"
-            placeholder="Search Pokémon here..."
+            placeholder="Type Pokémon name in LOWERCASE..."
             className="input"
             onChange={(e) => {
               setPokemonName(e.target.value);
